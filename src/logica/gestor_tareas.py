@@ -17,3 +17,9 @@ class GestorTareas:
 
     def ver_tareas(self):
         return self.tareas
+
+    def marcar_completada(self, indice):
+        if 0 <= indice < len(self.tareas):
+            self.tareas[indice].completada = True
+        else:
+            raise IndexError("Índice fuera de rango")
